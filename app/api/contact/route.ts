@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
 import { MessagesStore } from "@/lib/data";
-import { v4 as uuidv4 } from "uuid";
 import { getSessionFromCookies } from "@/lib/auth";
 import { withCors, corsPreflight } from "@/lib/cors";
 
@@ -25,7 +24,7 @@ export async function POST(req: NextRequest) {
 
   const messages = await MessagesStore.getAll();
   messages.unshift({
-    id: uuidv4(),
+    id: crypto.randomUUID(),
     name,
     email,
     phone: phone || "",
@@ -39,7 +38,7 @@ export async function POST(req: NextRequest) {
 }
 
 export async function GET() {
-  const session = getSessionFromCookies();
+  const session = await getSessionFromCookies();
   if (!session) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }

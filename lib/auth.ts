@@ -51,8 +51,8 @@ export function verifySessionToken(token: string) {
   }
 }
 
-export function getSessionFromCookies() {
-  const token = cookies().get(COOKIE_NAME)?.value;
+export async function getSessionFromCookies() {
+  const token = (await cookies()).get(COOKIE_NAME)?.value;
   if (!token) return null;
   return verifySessionToken(token);
 }

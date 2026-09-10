@@ -3,7 +3,7 @@ import { CausesStore, DonationsStore, MessagesStore, StatsStore } from "@/lib/da
 import { getSessionFromCookies } from "@/lib/auth";
 
 export async function GET() {
-  const session = getSessionFromCookies();
+  const session = await getSessionFromCookies();
   if (!session) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }

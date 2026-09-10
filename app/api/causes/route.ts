@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { CausesStore, Cause } from "@/lib/data";
 import { getSessionFromCookies } from "@/lib/auth";
-import { v4 as uuidv4 } from "uuid";
 import { withCors, corsPreflight } from "@/lib/cors";
 
 function slugify(text: string) {
@@ -22,7 +21,7 @@ export async function GET(req: NextRequest) {
 }
 
 export async function POST(req: NextRequest) {
-  const session = getSessionFromCookies();
+  const session = await getSessionFromCookies();
   if (!session) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
@@ -40,7 +39,7 @@ export async function POST(req: NextRequest) {
 
   const causes = await CausesStore.getAll();
   const newCause: Cause = {
-    id: uuidv4(),
+    id: crypto.randomUUID(),
     title: body.title,
     slug: `${slugify(body.title)}-${Date.now().toString(36)}`,
     category: body.category,
