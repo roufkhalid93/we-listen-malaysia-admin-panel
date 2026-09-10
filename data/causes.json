@@ -1,0 +1,124 @@
+[
+  {
+    "id": "c1",
+    "title": "School Bags for Flood-Affected Children",
+    "slug": "school-bags-flood-affected-children",
+    "category": "Education",
+    "tags": [
+      "Children",
+      "Education",
+      "Disaster Relief"
+    ],
+    "summary": "Replacing school essentials lost when monsoon floods swept through Kelantan homes this year.",
+    "description": "When the December floods hit Kelantan, dozens of families lost everything, including their children's school bags, books, and uniforms. This fund provides a complete set of school essentials so no child has to start the term empty-handed. Every ringgit goes directly to bags, stationery, uniforms, and shoes, sourced from local suppliers to also support the community's economic recovery.",
+    "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop",
+    "goal": 25000,
+    "raised": 16400,
+    "peopleHelped": 82,
+    "priority": true,
+    "status": "active",
+    "location": "Kelantan",
+    "createdAt": "2026-06-02T02:00:00.000Z"
+  },
+  {
+    "id": "c2",
+    "title": "Kitchen Table Fund for Single Mothers",
+    "slug": "kitchen-table-fund-single-mothers",
+    "category": "Single Mothers",
+    "tags": [
+      "Single Mothers",
+      "Food Security",
+      "Livelihood"
+    ],
+    "summary": "Monthly grocery support and small business starter kits for single mothers rebuilding on their own.",
+    "description": "Many single mothers we meet are one bad week away from an empty pantry. This fund covers monthly grocery vouchers for 40 registered families and provides starter kits, such as sewing machines, cooking equipment, or market stall supplies, to mothers ready to start a small home business. Our case workers check in monthly to track progress and adjust support as each family stabilises.",
+    "image": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?q=80&w=1200&auto=format&fit=crop",
+    "goal": 40000,
+    "raised": 27850,
+    "peopleHelped": 40,
+    "priority": true,
+    "status": "active",
+    "location": "Klang Valley",
+    "createdAt": "2026-05-14T02:00:00.000Z"
+  },
+  {
+    "id": "c3",
+    "title": "Warm Meals for Elderly Living Alone",
+    "slug": "warm-meals-elderly-living-alone",
+    "category": "Elderly Care",
+    "tags": [
+      "Elderly",
+      "Food Security"
+    ],
+    "summary": "Daily hot meal delivery for senior citizens with no family nearby to care for them.",
+    "description": "In flats across Cheras and Sentul, elderly residents who live alone often skip meals rather than risk a fall walking to the shops. Our volunteers deliver a hot, nutritious meal to each doorstep daily and stay a few minutes to check on their wellbeing. This fund keeps the kitchen stocked and the delivery riders on the road.",
+    "image": "https://images.unsplash.com/photo-1541802645635-11f2286a7482?q=80&w=1200&auto=format&fit=crop",
+    "goal": 18000,
+    "raised": 6200,
+    "peopleHelped": 55,
+    "priority": false,
+    "status": "active",
+    "location": "Kuala Lumpur",
+    "createdAt": "2026-04-20T02:00:00.000Z"
+  },
+  {
+    "id": "c4",
+    "title": "Tuition Support for B40 Students",
+    "slug": "tuition-support-b40-students",
+    "category": "Education",
+    "tags": [
+      "Children",
+      "Education"
+    ],
+    "summary": "After-school tuition and exam materials for underprivileged students facing SPM this year.",
+    "description": "Extra tuition classes can be the difference between passing and failing SPM, but they are out of reach for many B40 households. This fund sponsors after-school tuition, past-year exam papers, and a quiet study space for 60 form five students preparing for their exams.",
+    "image": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=1200&auto=format&fit=crop",
+    "goal": 30000,
+    "raised": 30000,
+    "peopleHelped": 60,
+    "priority": false,
+    "status": "completed",
+    "location": "Johor Bahru",
+    "createdAt": "2026-02-11T02:00:00.000Z"
+  },
+  {
+    "id": "c5",
+    "title": "Mobility Aids for Persons with Disabilities",
+    "slug": "mobility-aids-persons-with-disabilities",
+    "category": "Disability Support",
+    "tags": [
+      "Disability",
+      "Healthcare"
+    ],
+    "summary": "Wheelchairs, walking frames, and home ramps for OKU families who cannot afford them.",
+    "description": "A wheelchair or a simple ramp at the front door can restore someone's independence overnight, yet the cost is far beyond what many OKU families can manage. This fund supplies mobility aids and basic home modifications, assessed case by case by our partner physiotherapists.",
+    "image": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=1200&auto=format&fit=crop",
+    "goal": 22000,
+    "raised": 9100,
+    "peopleHelped": 24,
+    "priority": true,
+    "status": "active",
+    "location": "Penang",
+    "createdAt": "2026-07-01T02:00:00.000Z"
+  },
+  {
+    "id": "c6",
+    "title": "Emergency Shelter for Displaced Families",
+    "slug": "emergency-shelter-displaced-families",
+    "category": "Disaster Relief",
+    "tags": [
+      "Disaster Relief",
+      "Housing"
+    ],
+    "summary": "Temporary shelter, bedding, and clean water for families displaced by landslides.",
+    "description": "When a landslide forces a family from their home, the first 72 hours matter most. This fund keeps our emergency response kits ready, tents, bedding, water filters, and hygiene supplies, so we can respond within hours rather than days whenever disaster strikes.",
+    "image": "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?q=80&w=1200&auto=format&fit=crop",
+    "goal": 35000,
+    "raised": 12750,
+    "peopleHelped": 110,
+    "priority": false,
+    "status": "active",
+    "location": "Pahang",
+    "createdAt": "2026-06-25T02:00:00.000Z"
+  }
+]
