@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  eslint: { ignoreDuringBuilds: true },
+  // Next 16 auto-generates AGENTS.md / CLAUDE.md on dev start; opt out.
+  agentRules: false,
   typescript: { ignoreBuildErrors: false },
   images: {
     remotePatterns: [

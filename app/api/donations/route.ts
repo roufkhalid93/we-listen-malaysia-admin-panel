@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { DonationsStore, CausesStore } from "@/lib/data";
 import { getSessionFromCookies } from "@/lib/auth";
-import { v4 as uuidv4 } from "uuid";
 import { withCors, corsPreflight } from "@/lib/cors";
 
 export async function OPTIONS(req: NextRequest) {
@@ -9,7 +8,7 @@ export async function OPTIONS(req: NextRequest) {
 }
 
 export async function GET(req: NextRequest) {
-  const session = getSessionFromCookies();
+  const session = await getSessionFromCookies();
   if (!session) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
@@ -54,7 +53,7 @@ export async function POST(req: NextRequest) {
 
   const donations = await DonationsStore.getAll();
   const donation = {
-    id: uuidv4(),
+    id: crypto.randomUUID(),
     causeId,
     causeTitle: cause.title,
     name,

@@ -4,10 +4,11 @@ import { getSessionFromCookies } from "@/lib/auth";
 
 export async function GET(
   _req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
+  const { id } = await params;
   const causes = await CausesStore.getAll();
-  const cause = causes.find((c) => c.id === params.id);
+  const cause = causes.find((c) => c.id === id);
   if (!cause) {
     return NextResponse.json({ error: "Not found" }, { status: 404 });
   }
@@ -16,16 +17,17 @@ export async function GET(
 
 export async function PUT(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
-  const session = getSessionFromCookies();
+  const session = await getSessionFromCookies();
   if (!session) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
+  const { id } = await params;
   const body = await req.json();
   const causes = await CausesStore.getAll();
-  const index = causes.findIndex((c) => c.id === params.id);
+  const index = causes.findIndex((c) => c.id === id);
   if (index === -1) {
     return NextResponse.json({ error: "Not found" }, { status: 404 });
   }
@@ -62,15 +64,16 @@ export async function PUT(
 
 export async function DELETE(
   _req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
-  const session = getSessionFromCookies();
+  const session = await getSessionFromCookies();
   if (!session) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
+  const { id } = await params;
   const causes = await CausesStore.getAll();
-  const filtered = causes.filter((c) => c.id !== params.id);
+  const filtered = causes.filter((c) => c.id !== id);
   if (filtered.length === causes.length) {
     return NextResponse.json({ error: "Not found" }, { status: 404 });
   }
